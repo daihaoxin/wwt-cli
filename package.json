@@ -1,0 +1,70 @@
+{
+	"name": "@wowotou/cli",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"bin": {
+		"wwt": "./dist/main/code/index.js"
+	},
+	"scripts": {
+		"clean": "rimraf dist",
+		"build": "tsc",
+		"dev": "tsc -w",
+		"prettier:fix": "prettier -c --write ./**/*.{ts,js}",
+		"eslint:fix": "eslint --fix ./**/*.{ts,js}",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"npm run eslint:fix",
+			"npm run prettier:fix"
+		]
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"author": "xingmu",
+	"license": "ISC",
+	"devDependencies": {
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"@types/jest": "^25.2.3",
+		"@types/node": "^14.0.9",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"commitizen": "^4.1.2",
+		"cz-conventional-changelog": "^3.2.0",
+		"eslint": "^7.1.0",
+		"eslint-config-alloy": "^3.7.2",
+		"husky": "^4.2.5",
+		"jest": "^26.0.1",
+		"lint-staged": "^10.2.7",
+		"prettier": "^2.0.5",
+		"rimraf": "^3.0.2",
+		"ts-jest": "^26.1.0",
+		"typescript": "^3.9.3"
+	},
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/daihaoxin/larva-cli.git"
+	},
+	"keywords": [],
+	"bugs": {
+		"url": "https://github.com/daihaoxin/larva-cli/issues"
+	},
+	"homepage": "https://github.com/daihaoxin/larva-cli#readme",
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
