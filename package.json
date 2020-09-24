@@ -7,7 +7,7 @@
 		"wwt": "./dist/main/code/index.js"
 	},
 	"scripts": {
-		"clean": "rimraf dist",
+		"prebuild": "rimraf dist",
 		"build": "tsc",
 		"dev": "tsc -w",
 		"prettier:fix": "prettier -c --write ./**/*.{ts,js}",
@@ -20,7 +20,8 @@
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged",
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-push": "echo 提交代码前需要先进行单元测试 && npm test"
 		}
 	},
 	"lint-staged": {
@@ -67,9 +68,6 @@
 		"@types/node": "^14.0.9",
 		"@typescript-eslint/eslint-plugin": "^3.0.2",
 		"@typescript-eslint/parser": "^3.0.2",
-		"commitizen": "^4.1.2",
-		"conventional-changelog-cli": "^2.0.34",
-		"cz-conventional-changelog": "^3.2.0",
 		"eslint": "^7.1.0",
 		"eslint-config-alloy": "^3.7.2",
 		"husky": "^4.2.5",
@@ -77,23 +75,17 @@
 		"lint-staged": "^10.2.7",
 		"prettier": "^2.0.5",
 		"rimraf": "^3.0.2",
-		"standard-version": "^8.0.0",
 		"ts-jest": "^26.1.0",
 		"typescript": "^3.9.3"
 	},
 	"dependencies": {},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/daihaoxin/larva-cli.git"
+		"url": "https://github.com/daihaoxin/wwt-cli.git"
 	},
 	"keywords": [],
 	"bugs": {
-		"url": "https://github.com/daihaoxin/larva-cli/issues"
+		"url": "https://github.com/daihaoxin/wwt-cli/issues"
 	},
-	"homepage": "https://github.com/daihaoxin/larva-cli#readme",
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	}
+	"homepage": "https://github.com/daihaoxin/wwt-cli#readme"
 }
