@@ -1,0 +1,113 @@
+{
+  // "extends": "./othertsconfig.json",
+  // WebStorm 中可以在设置中开启 recompile on changes，不用配置这个属性
+  "compileOnSave": true,
+  "compilerOptions": {
+    /* Basic Options */
+    // 编译目标,
+    "target": "es6",
+    // 增量编译
+    "incremental": true,
+    // Redirect output structure to the directory.,
+    "outDir": "dist",
+    /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
+    "module": "commonjs",
+    // Generates corresponding '.d.ts' file.,
+    "declaration": true,
+    // Generates a sourcemap for each corresponding '.d.ts' file.,
+    "declarationMap": true,
+    // 是否默认禁用 any,
+    "noImplicitAny": true,
+    // 是否移除注释,
+    "removeComments": false,
+    "types": [
+      // 默认引入的类型声明
+      "node"
+    ],
+    // 工作根目录,
+    "baseUrl": ".",
+    /* Strict Type-Checking Options */
+    "strict": true,
+    //允许编译javascript文件。默认不允许
+    "allowJs": true,
+    // 支持引入 json 模块
+    "resolveJsonModule": true,
+    /* Generates corresponding '.map' file. */
+    "sourceMap": true,
+    /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    // "lib": [],                             /* Specify library files to be included in the compilation. */
+    // "allowJs": true,                       /* Allow javascript files to be compiled. */
+    // "checkJs": true,                       /* Report errors in .js files. */
+    // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+
+    // "outFile": "./",                       /* Concatenate and emit output to single file. */
+    "rootDir": "./src",
+    /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    // "composite": true,                     /* Enable project compilation */
+    // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
+    //		"removeComments": true,
+    /* Do not emit comments to output. */
+    // "noEmit": true,                        /* Do not emit outputs. */
+    // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
+    // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
+    // "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+
+    /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+    // "strictNullChecks": true,              /* Enable strict null checks. */
+    // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
+    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    "strictPropertyInitialization": false,
+    /* Enable strict checking of property initialization in classes. */
+    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                /* Report errors on unused locals. */
+    // "noUnusedParameters": true,            /* Report errors on unused parameters. */
+    // "noImplicitReturns": true,             /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */
+
+    /* Module Resolution Options */
+    // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    //		"baseUrl": "./",
+    /* Base directory to resolve non-absolute module names. */
+    // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
+    // "typeRoots": [],                       /* List of folders to include type definitions from. */
+    // "types": [],                           /* Type declaration files to be included in compilation. */
+    // "allowSyntheticDefaultImports": true,  /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,
+    /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
+    // "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */
+
+    /* Source Map Options */
+    // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+    // stdout 输出
+    //
+    // 给错误和消息设置样式，使用颜色和上下文
+    "pretty": true,
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    /* Enables experimental support for ES7 decorators. */
+    "emitDecoratorMetadata": true
+    /* Enables experimental support for emitting type metadata for decorators. */
+  },
+  //    "files":[],
+  "include": ["src/main/**/*"]
+  //
+  //    "exclude": [
+  //        "**/*.spec.ts"
+  //    ]
+  // 如果没有特殊指定， "exclude"默认情况下会排除node_modules，bower_components，jspm_packages和<outDir>目录。
+  //	"exclude": [
+  //		"node_modules",
+  //		"test",
+  //		"dist",
+  //		"**/*spec.ts"
+  //	]
+}

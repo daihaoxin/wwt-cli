@@ -1,0 +1,16 @@
+# ESLint总是忽略 /node_modules/* 和 /bower_components/* 中的文件
+
+
+**/*.svg
+package.json
+package-lock.json
+tsconfig.build.json
+build/**
+dist/**
+lib
+*.iml
+.idea
+.vscode
+
+# 以 ! 开头的行是否定模式，它将会重新包含一个之前被忽略的模式。 忽略中的忽略就是包含
+# !build/button.js
