@@ -63,8 +63,9 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/commander": "^2.12.2",
     "@types/node": "^14.14.3",
     "@types/shelljs": "^0.8.8",
     "@types/webpack-env": "^1.15.3",
@@ -93,7 +94,9 @@
     "webpack": "^4.44.2",
     "webpack-node-externals": "^2.5.2"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/daihaoxin/wwt-cli.git"
