@@ -1,6 +1,6 @@
 {
-  "name": "@wowotou/cli",
-  "version": "0.0.1",
+  "name": "@wowotou/cli2",
+  "version": "0.0.2",
   "description": "",
   "author": "xingmu",
   "bin": {
@@ -8,8 +8,8 @@
   },
   "scripts": {
     "prebuild": "npm run prettier:fix && npm run eslint:fix",
-    "build": "node ./script/build.js",
-    "dev": "node ./script/start.js",
+    "build": "wwt build",
+    "dev": "wwt dev",
     "prettier:fix": "prettier -c --write ./**/*.*",
     "eslint:fix": "eslint --fix ./**/*.{js,jsx,ts,tsx}",
     "pc": "eslint --fix && prettier --write && git add .",
@@ -72,6 +72,7 @@
     "@types/webpack-node-externals": "^2.5.0",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
+    "@wowotou/cli": "0.0.2",
     "commitizen": "~4.2.1",
     "eslint": "^7.9.0",
     "eslint-config-alloy": "^3.8.0",
