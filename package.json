@@ -89,7 +89,7 @@
     "@babel/preset-typescript": "^7.12.1",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "source-map-support": "^0.5.19",
     "start-server-webpack-plugin": "^2.2.5",
     "webpack": "^4.44.2",
